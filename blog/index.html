@@ -37,7 +37,9 @@
   .blog-grid { padding: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
   .blog-card { background: var(--cream); border: 1px solid rgba(43,43,43,0.08); text-decoration: none; display: flex; flex-direction: column; transition: border-color 0.3s; }
   .blog-card:hover { border-color: var(--burgundy); }
-  .blog-card-img { height: 220px; background: var(--sand); background-size: cover; background-position: center; }
+  .blog-card-img { height: 220px; background: var(--sand); overflow: hidden; position: relative; }
+  .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+  .blog-card:hover .blog-card-img img { transform: scale(1.04); }
   .blog-card-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
   .blog-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
   .blog-cat { font-family: var(--font-d); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bronze); background: var(--burgundy-pale); padding: 0.3rem 0.7rem; }
@@ -92,8 +94,68 @@
 
 <div class="blog-grid">
   
+  <a class="blog-card" href="/blog/logo-tasarim-fiyatlari-2026.html">
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/1b3fc9109076543.Y3JvcCw1MDgxLDM5NzQsMTQwOCwyNTE.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Visual Identity</span>
+        <span class="blog-date">2026-05-21</span>
+      </div>
+      <h2 class="blog-title">Logo Tasarım Fiyatları 2026: Gerçekçi Bir Rehber</h2>
+      <p class="blog-excerpt">2026 yılında logo tasarımı için ne kadar bütçe ayırmalısınız? Freelancer mı ajans mı? Fiyatı etkileyen faktörler ve dikkat etmeniz gerekenler.</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
+  <a class="blog-card" href="/blog/kurumsal-kimlik-tasarimi-fiyatlari-2026.html">
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/856689249429251.Y3JvcCw1NjI2LDQ0MDAsMCw1NQ.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Visual Identity</span>
+        <span class="blog-date">2026-05-20</span>
+      </div>
+      <h2 class="blog-title">Kurumsal Kimlik Tasarımı Fiyatları 2026: Paketler ve Maliyetler</h2>
+      <p class="blog-excerpt">Kurumsal kimlik tasarımı için 2026 yılında ne kadar bütçe ayırmalısınız? Başlangıç, profesyonel ve premium paket içerikleri ve fiyat rehberi.</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
+  <a class="blog-card" href="/blog/brand-book-nedir.html">
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/9bcca7244577891.Y3JvcCw2NTUsNTEyLDM5MSwxMTQ5.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Brand Strategy</span>
+        <span class="blog-date">2026-05-19</span>
+      </div>
+      <h2 class="blog-title">Brand Book (Marka Kılavuzu) Nedir, Neden Şarttır?</h2>
+      <p class="blog-excerpt">Brand Book sadece büyük markalar için değil. Küçük işletmeden kurumsal şirkete her marka için neden vazgeçilmez olduğunu anlattık.</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
+  <a class="blog-card" href="/blog/kartvizit-tasarimi-rehberi.html">
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/e5493d244580647.Y3JvcCwyNDgyLDE5NDEsMCw3ODY.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Print Design</span>
+        <span class="blog-date">2026-05-18</span>
+      </div>
+      <h2 class="blog-title">Profesyonel Kartvizit Tasarımı: İlk İzlenimi Doğru Bırakmak</h2>
+      <p class="blog-excerpt">Dijital çağda kartvizit hala en güçlü networking araçlarından biri. Premium kartvizit tasarımında dikkat edilmesi gereken her şey.</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
+  <a class="blog-card" href="/blog/2026-logo-trendleri.html">
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/db988f109507141.Y3JvcCw1MDgxLDM5NzQsMTQ1OSwyNjQ.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Visual Identity</span>
+        <span class="blog-date">2026-05-17</span>
+      </div>
+      <h2 class="blog-title">2026 Logo Tasarım Trendleri: Markanızı Geleceğe Taşıyın</h2>
+      <p class="blog-excerpt">2026 yılında öne çıkan logo tasarım trendleri neler? Hangi trendler markanıza değer katar, hangilerinden kaçınmalısınız?</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
   <a class="blog-card" href="/blog/print-design-dijital-cagda.html">
-    <div class="blog-card-img" style="background-image:url(/blog/images/print-design.jpg)"></div>
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/274d90223591647.Y3JvcCwzMTcxLDI0ODEsMTY0LDA.jpg)"></div>
     <div class="blog-card-body">
       <div class="blog-meta">
         <span class="blog-cat">Print Design</span>
@@ -105,7 +167,7 @@
     </div>
   </a>
   <a class="blog-card" href="/blog/kurumsal-kimlik-neden-onemli.html">
-    <div class="blog-card-img" style="background-image:url(/blog/images/kurumsal-kimlik.jpg)"></div>
+    <div class="blog-card-img" style="background-image:url(https://mir-s3-cdn-cf.behance.net/projects/808/87e28c219410295.Y3JvcCw0NTAxLDM1MjAsMCw3MDE.png)"></div>
     <div class="blog-card-body">
       <div class="blog-meta">
         <span class="blog-cat">Visual Identity</span>
