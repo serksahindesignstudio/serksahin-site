@@ -3,7 +3,7 @@ title: "Kurumsal Kimlik Neden Bu Kadar Önemli?"
 date: 2026-05-01
 category: visual-identity
 excerpt: "Bir marka sadece logo değildir. Kurumsal kimlik; renk, tipografi, ton ve tutarlılığın bir bütünüdür. Peki neden bu kadar kritik?"
-thumbnail: /blog/images/kurumsal-kimlik.jpg
+thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/87e28c219410295.Y3JvcCw0NTAxLDM1MjAsMCw3MDE.png
 seo_title: "Kurumsal Kimlik Tasarımı Neden Önemli? | Serksahin Design Studio"
 seo_description: "Kurumsal kimlik sadece logo değil; renk paleti, tipografi ve marka sesi bütünüdür. Premium marka kimliği oluşturmanın püf noktaları."
 draft: false

@@ -3,7 +3,7 @@ title: "Kurumsal Kimlik Tasarımı Fiyatları 2026: Paketler ve Maliyetler"
 date: 2026-05-20
 category: visual-identity
 excerpt: "Kurumsal kimlik tasarımı için 2026 yılında ne kadar bütçe ayırmalısınız? Başlangıç, profesyonel ve premium paket içerikleri ve fiyat rehberi."
-thumbnail: /blog/images/kurumsal-kimlik-fiyat.jpg
+thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/856689249429251.Y3JvcCw1NjI2LDQ0MDAsMCw1NQ.jpg
 seo_title: "Kurumsal Kimlik Tasarımı Fiyatları 2026 | İstanbul | Serksahin Design Studio"
 seo_description: "2026 yılında kurumsal kimlik tasarımı fiyatları ne kadar? Paket içerikleri, fiyatı etkileyen faktörler ve doğru tasarımcı seçimi rehberi."
 draft: false

@@ -3,7 +3,7 @@ title: "Profesyonel Kartvizit Tasarımı: İlk İzlenimi Doğru Bırakmak"
 date: 2026-05-18
 category: print-design
 excerpt: "Dijital çağda kartvizit hala en güçlü networking araçlarından biri. Premium kartvizit tasarımında dikkat edilmesi gereken her şey."
-thumbnail: /blog/images/kartvizit.jpg
+thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/e5493d244580647.Y3JvcCwyNDgyLDE5NDEsMCw3ODY.jpg
 seo_title: "Profesyonel Kartvizit Tasarımı 2026 | Premium Baskı | Serksahin Design Studio"
 seo_description: "Profesyonel kartvizit nasıl tasarlanır? Doğru boyut, kağıt kalitesi, baskı teknikleri ve tasarım ipuçları. Premium kartvizit için bilmeniz gerekenler."
 draft: false
