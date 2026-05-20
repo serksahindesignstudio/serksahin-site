@@ -129,7 +129,9 @@ const blogIndex = `<!DOCTYPE html>
   .blog-grid { padding: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
   .blog-card { background: var(--cream); border: 1px solid rgba(43,43,43,0.08); text-decoration: none; display: flex; flex-direction: column; transition: border-color 0.3s; }
   .blog-card:hover { border-color: var(--burgundy); }
-  .blog-card-img { height: 220px; background: var(--sand); background-size: cover; background-position: center; }
+  .blog-card-img { height: 220px; background: var(--sand); overflow: hidden; position: relative; }
+  .blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+  .blog-card:hover .blog-card-img img { transform: scale(1.04); }
   .blog-card-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
   .blog-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
   .blog-cat { font-family: var(--font-d); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bronze); background: var(--burgundy-pale); padding: 0.3rem 0.7rem; }
