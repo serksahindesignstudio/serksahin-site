@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — serksahin | Visual Identity | Premium Branding | Print Design</title>
+<meta name="description" content="Marka kimliği, tasarım stratejisi, baskı çözümleri ve yaratıcı endüstri üzerine içgörüler.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@300,400,500,600,700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --cream: #EFE6DA; --sand: #D8C6AE; --charcoal: #2B2B2B;
+    --bronze: #A97449; --warm-gray: #8B8B8B;
+    --burgundy: #4B1E24; --burgundy-pale: #f5eced;
+    --font-d: 'ClashGrotesk','Inter',sans-serif; --font-b: 'Inter',sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--charcoal); font-family: var(--font-b); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: var(--burgundy); border-bottom: 1px solid rgba(169,116,73,0.25); }
+  .nav-logo img { height: 26px; display: block; filter: brightness(1.15); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; color: rgba(239,230,218,0.6); text-decoration: none; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--bronze); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); transition: all 0.3s; }
+
+  .page-hero { background: var(--burgundy); padding: 10rem 4rem 5rem; position: relative; overflow: hidden; }
+  .page-hero::after { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border: 1px solid rgba(169,116,73,0.1); border-radius: 50%; pointer-events: none; }
+  .page-eyebrow { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.4em; color: var(--bronze); text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+  .page-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--bronze); }
+  .page-title { font-family: var(--font-d); font-size: clamp(2.5rem,5vw,4rem); font-weight: 300; color: var(--cream); letter-spacing: -0.02em; }
+  .page-title em { font-style: italic; color: var(--bronze); }
+  .page-desc { font-size: 13px; color: rgba(239,230,218,0.5); line-height: 1.8; margin-top: 1.5rem; max-width: 500px; font-weight: 300; }
+
+  .blog-grid { padding: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .blog-card { background: var(--cream); border: 1px solid rgba(43,43,43,0.08); text-decoration: none; display: flex; flex-direction: column; transition: border-color 0.3s; }
+  .blog-card:hover { border-color: var(--burgundy); }
+  .blog-card-img { height: 220px; background: var(--sand); background-size: cover; background-position: center; }
+  .blog-card-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+  .blog-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .blog-cat { font-family: var(--font-d); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bronze); background: var(--burgundy-pale); padding: 0.3rem 0.7rem; }
+  .blog-date { font-family: var(--font-d); font-size: 8px; letter-spacing: 0.1em; color: var(--warm-gray); }
+  .blog-title { font-family: var(--font-d); font-size: 1.05rem; font-weight: 500; color: var(--charcoal); line-height: 1.35; margin-bottom: 0.8rem; }
+  .blog-excerpt { font-size: 12px; color: var(--warm-gray); line-height: 1.7; font-weight: 300; flex: 1; }
+  .blog-read { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); margin-top: 1.5rem; display: block; transition: letter-spacing 0.3s; }
+  .blog-card:hover .blog-read { letter-spacing: 0.3em; }
+
+  .empty-blog { padding: 6rem 4rem; text-align: center; }
+  .empty-blog p { font-family: var(--font-d); font-size: 1rem; color: var(--warm-gray); font-weight: 300; }
+
+  footer { background: var(--charcoal); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  .footer-logo img { height: 28px; display: block; filter: brightness(1.15); }
+  .footer-copy { font-size: 11px; color: rgba(139,139,139,0.4); font-family: var(--font-d); letter-spacing: 0.1em; }
+
+  @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2,1fr); padding: 3rem 2rem; } nav { padding: 1.2rem 2rem; } footer { padding: 1.5rem 2rem; } .page-hero { padding: 8rem 2rem 4rem; } }
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--burgundy); align-items: center; justify-content: center; gap: 2rem; z-index: 200; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 14px; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+    .blog-grid { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+    .page-hero { padding: 7rem 1.5rem 3rem; }
+    footer { padding: 1.2rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="/index.html"><img src="/logo-text.png" alt="serksahin design studio" /></a></div>
+  <ul class="nav-links">
+    <li><a href="/index.html#services">Hizmetler</a></li>
+    <li><a href="/portfolio.html">Portföy</a></li>
+    <li><a href="/video.html">Video</a></li>
+    <li><a href="/webdesign.html">Web Design</a></li>
+    <li><a href="/blog/index.html" class="active">Blog</a></li>
+    <li><a href="/contact.html">İletişim</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-eyebrow">Blog</div>
+  <h1 class="page-title">Tasarım &<br><em>Strateji</em></h1>
+  <p class="page-desc">Marka kimliği, baskı tasarımı, web ve müzik videosu prodüksiyonu üzerine içgörüler, ipuçları ve sektör bakış açıları.</p>
+</div>
+
+<div class="blog-grid">
+  
+  <a class="blog-card" href="/blog/print-design-dijital-cagda.html">
+    <div class="blog-card-img" style="background-image:url(/blog/images/print-design.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Print Design</span>
+        <span class="blog-date">2026-05-10</span>
+      </div>
+      <h2 class="blog-title">Dijital Çağda Print Design Hala Neden Önemli?</h2>
+      <p class="blog-excerpt">Her şey dijitale taşınırken, fiziksel dokunuşun gücü hiç azalmadı. Baskı tasarımının marka deneyimindeki yeri neden vazgeçilmez?</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
+  <a class="blog-card" href="/blog/kurumsal-kimlik-neden-onemli.html">
+    <div class="blog-card-img" style="background-image:url(/blog/images/kurumsal-kimlik.jpg)"></div>
+    <div class="blog-card-body">
+      <div class="blog-meta">
+        <span class="blog-cat">Visual Identity</span>
+        <span class="blog-date">2026-05-01</span>
+      </div>
+      <h2 class="blog-title">Kurumsal Kimlik Neden Bu Kadar Önemli?</h2>
+      <p class="blog-excerpt">Bir marka sadece logo değildir. Kurumsal kimlik; renk, tipografi, ton ve tutarlılığın bir bütünüdür. Peki neden bu kadar kritik?</p>
+      <span class="blog-read">Devamını Oku →</span>
+    </div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-logo"><a href="/index.html"><img src="/logo-text.png" alt="serksahin design studio" /></a></div>
+  <div class="footer-copy">© 2026 — Istanbul, Türkiye</div>
+</footer>
+<script>
+  function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }));
+</script>
+</body>
+</html>

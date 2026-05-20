@@ -1,0 +1,9 @@
+{
+  "name": "serksahin-design-studio",
+  "version": "1.0.0",
+  "description": "Serksahin Design Studio Web Site",
+  "scripts": {
+    "build": "node build-blog.js",
+    "dev": "node build-blog.js && echo 'Build done - open index.html'"
+  }
+}

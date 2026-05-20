@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="shortcut icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design — serksahin | Visual Identity | Premium Branding | Print Design</title>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@300,400,500,600,700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --cream: #EFE6DA; --sand: #D8C6AE; --charcoal: #2B2B2B;
+    --bronze: #A97449; --warm-gray: #8B8B8B;
+    --burgundy: #4B1E24; --burgundy-pale: #f5eced;
+    --font-d: 'ClashGrotesk','Inter',sans-serif; --font-b: 'Inter',sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--charcoal); font-family: var(--font-b); overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: var(--burgundy); border-bottom: 1px solid rgba(169,116,73,0.25); }
+  .nav-logo img { height: 26px; display: block; filter: brightness(1.15); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; color: rgba(239,230,218,0.6); text-decoration: none; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--bronze); }
+
+  .page-hero { background: var(--burgundy); padding: 10rem 4rem 5rem; position: relative; overflow: hidden; }
+  .page-hero::after { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; border: 1px solid rgba(169,116,73,0.1); border-radius: 50%; pointer-events: none; }
+  .page-eyebrow { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.4em; color: var(--bronze); text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+  .page-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--bronze); }
+  .page-title { font-family: var(--font-d); font-size: clamp(2.5rem,5vw,4rem); font-weight: 300; color: var(--cream); letter-spacing: -0.02em; line-height: 1.1; }
+  .page-title em { font-style: italic; color: var(--bronze); }
+  .page-desc { font-size: 13px; color: rgba(239,230,218,0.55); line-height: 1.8; margin-top: 1.5rem; max-width: 560px; font-weight: 300; }
+
+  /* Hizmetler açıklama */
+  .services-intro { padding: 5rem 4rem; background: var(--cream); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; }
+  .svc-item { background: var(--burgundy-pale); border: 1px solid rgba(75,30,36,0.1); padding: 2.5rem 2rem; }
+  .svc-num { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; color: var(--bronze); text-transform: uppercase; margin-bottom: 1.5rem; }
+  .svc-name { font-family: var(--font-d); font-size: 1rem; font-weight: 500; color: var(--burgundy); margin-bottom: 0.8rem; }
+  .svc-desc { font-size: 12px; color: var(--warm-gray); line-height: 1.7; font-weight: 300; }
+
+  /* Tamamlanan proje showcase */
+  .project-section { padding: 6rem 4rem; background: var(--charcoal); }
+  .proj-label { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.4em; color: var(--bronze); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
+  .proj-label::before { content: ''; display: block; width: 40px; height: 1px; background: var(--bronze); }
+  .proj-title-lg { font-family: var(--font-d); font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--cream); letter-spacing: -0.02em; margin-bottom: 3rem; }
+  .proj-title-lg em { font-style: italic; color: var(--bronze); }
+
+  .project-card { background: #1a1a1a; border: 1px solid rgba(169,116,73,0.1); overflow: hidden; }
+  .proj-browser { background: #111; padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; }
+  .dot-y { background: #febc2e; }
+  .dot-g { background: #28c840; }
+  .proj-url { font-family: var(--font-b); font-size: 11px; color: rgba(255,255,255,0.35); margin-left: 0.8rem; letter-spacing: 0.05em; }
+  .proj-screenshot { width: 100%; display: block; aspect-ratio: 16/8; object-fit: cover; object-position: top; }
+  .proj-screenshot-placeholder {
+    width: 100%; aspect-ratio: 16/8;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .proj-screenshot-placeholder::before {
+    content: 'artware.com.tr';
+    font-family: var(--font-d); font-size: 2rem; font-weight: 300;
+    color: rgba(169,116,73,0.15); letter-spacing: 0.1em;
+  }
+
+  .proj-info { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .proj-info-item { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.05); }
+  .proj-info-item:last-child { border-right: none; }
+  .info-label { font-family: var(--font-d); font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bronze); margin-bottom: 0.8rem; }
+  .info-val { font-family: var(--font-d); font-size: 0.9rem; font-weight: 300; color: var(--cream); }
+  .info-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+  .tag { font-family: var(--font-d); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm-gray); border: 1px solid rgba(139,139,139,0.25); padding: 0.25rem 0.6rem; }
+
+  .proj-cta { padding: 2rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; }
+  .proj-cta-text { font-size: 12px; color: rgba(239,230,218,0.4); font-weight: 300; }
+  .btn-visit { font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); border: 1px solid rgba(169,116,73,0.4); padding: 0.8rem 2rem; text-decoration: none; transition: all 0.3s; }
+  .btn-visit:hover { background: var(--burgundy); border-color: var(--burgundy); }
+
+  /* Süreç */
+  .process-section { padding: 6rem 4rem; background: var(--cream); }
+  .section-num { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; color: var(--bronze); text-transform: uppercase; margin-bottom: 0.8rem; }
+  .section-title { font-family: var(--font-d); font-size: clamp(1.7rem,2.5vw,2.3rem); font-weight: 300; color: var(--charcoal); letter-spacing: -0.02em; margin-bottom: 3rem; }
+  .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+  .process-step { background: var(--burgundy-pale); border: 1px solid rgba(75,30,36,0.1); padding: 2.5rem 2rem; }
+  .step-num { font-family: var(--font-d); font-size: 2rem; font-weight: 300; color: rgba(75,30,36,0.2); margin-bottom: 1rem; }
+  .step-name { font-family: var(--font-d); font-size: 0.9rem; font-weight: 500; color: var(--burgundy); margin-bottom: 0.8rem; }
+  .step-desc { font-size: 12px; color: var(--warm-gray); line-height: 1.7; font-weight: 300; }
+
+  /* CTA */
+  .cta-section { background: var(--burgundy); padding: 6rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .cta-section::before { content: 'WEB'; position: absolute; font-family: var(--font-d); font-size: 18rem; font-weight: 700; color: rgba(255,255,255,0.03); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+  .cta-eyebrow { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.5rem; }
+  .cta-title { font-family: var(--font-d); font-size: clamp(1.8rem,3.5vw,3rem); font-weight: 300; color: var(--cream); letter-spacing: -0.02em; margin-bottom: 2.5rem; line-height: 1.15; }
+  .cta-title em { font-style: italic; color: var(--sand); }
+  .btn-primary { background: var(--bronze); color: var(--cream); font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.5rem; border: none; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
+  .btn-primary:hover { background: var(--cream); color: var(--burgundy); }
+
+  footer { background: var(--charcoal); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  .footer-logo img { height: 28px; display: block; filter: brightness(1.15); }
+  .footer-copy { font-size: 11px; color: rgba(139,139,139,0.4); font-family: var(--font-d); letter-spacing: 0.1em; }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 1024px) {
+    nav { padding: 1.2rem 2rem; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 8rem 2rem 4rem; }
+    .hero-right { min-height: 50vw; }
+    .logo-stage { width: 260px; height: 260px; }
+    .stats { grid-template-columns: repeat(2, 1fr); padding: 2rem; }
+    .services-section, .services-section.services-intro { padding: 4rem 2rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-grid, .video-grid, .works-grid { grid-template-columns: repeat(2, 1fr); }
+    .section, .portfolio-sec, .video-sec, .references-sec, .project-section, .process-section, .cta-section { padding: 4rem 2rem; }
+    .about-sec { grid-template-columns: 1fr; }
+    .about-left { padding: 4rem 2rem; min-height: 60vw; }
+    .about-right { padding: 4rem 2rem; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .contact-left { padding: 8rem 2rem 4rem; min-height: auto; }
+    .contact-right { padding: 4rem 2rem; }
+    .logos-strip { grid-template-columns: repeat(5, 1fr); }
+    .filter-bar { padding: 1rem 2rem; flex-wrap: wrap; gap: 0.4rem; }
+    footer { padding: 1.5rem 2rem; }
+    .page-hero { padding: 8rem 2rem 4rem; }
+    .proj-info { grid-template-columns: 1fr; }
+    .proj-info-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .proj-info-item:last-child { border-bottom: none; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-intro { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  @media (max-width: 768px) {
+    /* NAV — hamburger */
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--burgundy); align-items: center; justify-content: center; gap: 2rem; z-index: 200; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 14px; letter-spacing: 0.15em; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 300; position: relative; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* HERO */
+    .hero-left { padding: 7rem 1.5rem 3rem; }
+    .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
+    .hero-right { min-height: 70vw; }
+    .logo-stage { width: 200px; height: 200px; }
+    .hero-badge { bottom: 1.5rem; right: 1.5rem; }
+    .hero-badge span { font-size: 20px; }
+
+    /* STATS */
+    .stats { grid-template-columns: repeat(2, 1fr); padding: 1.5rem; gap: 0; }
+    .stat { padding: 1.2rem 0.5rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .stat:nth-child(2n) { border-right: none; }
+    .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+
+    /* SERVICES */
+    .services-grid { grid-template-columns: 1fr; gap: 2px; }
+    .service-card { padding: 2rem 1.5rem; }
+
+    /* PORTFOLIO / VIDEO / WORKS */
+    .portfolio-grid, .video-grid, .works-grid { grid-template-columns: 1fr; gap: 2px; }
+    .proj-card, .video-card, .work-card { aspect-ratio: 16/9; }
+
+    /* LOGOS */
+    .logos-strip { grid-template-columns: repeat(3, 1fr); }
+    .logo-cell { padding: 1.2rem 0.8rem; }
+    .logo-cell img { max-width: 70px; max-height: 28px; }
+
+    /* ABOUT */
+    .about-left { display: none; }
+    .about-right { padding: 3rem 1.5rem; }
+
+    /* CONTACT */
+    .contact-left { padding: 7rem 1.5rem 3rem; }
+    .contact-right { padding: 3rem 1.5rem; }
+    .contact-info { gap: 1rem; }
+    .info-item { flex-direction: column; gap: 0.3rem; }
+
+    /* SECTIONS */
+    .section, .portfolio-sec, .video-sec, .references-sec, .services-section { padding: 3rem 1.5rem; }
+    .page-hero { padding: 7rem 1.5rem 3rem; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .filter-bar { padding: 0.8rem 1.5rem; overflow-x: auto; flex-wrap: nowrap; }
+    .filter-btn { white-space: nowrap; }
+
+    /* WEB DESIGN */
+    .project-section, .process-section, .cta-section { padding: 3rem 1.5rem; }
+    .process-grid { grid-template-columns: 1fr; }
+    .proj-cta { flex-direction: column; gap: 1rem; text-align: center; }
+    .services-intro { padding: 3rem 1.5rem; }
+
+    /* FOOTER */
+    footer { padding: 1.2rem 1.5rem; }
+    .footer-logo img { height: 20px; }
+
+    /* MODAL */
+    .yt-modal-inner { width: 95vw; }
+    .yt-close { top: -2.5rem; font-size: 1.5rem; }
+
+    /* REF QUOTE */
+    .ref-quote p { font-size: 0.9rem; }
+    .logos-strip { border: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .logo-cell { border: none; padding: 0.8rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+    .page-title { font-size: clamp(2rem, 9vw, 3rem); }
+    .hero-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .btn-primary, .btn-ghost { width: 100%; text-align: center; display: block; }
+    .logos-strip { grid-template-columns: repeat(2, 1fr); }
+    .stat-num { font-size: 1.8rem; }
+    .social-row { flex-direction: column; gap: 0.8rem; }
+  }
+  /* ===================================================== */
+
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="logo-text.png" alt="serksahin design studio" /></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Hizmetler</a></li>
+    <li><a href="portfolio.html">Portföy</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="webdesign.html" class="active">Web Design</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="contact.html">İletişim</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Web Design</div>
+  <h1 class="page-title">Dijital Deneyim<br><em>Tasarımı</em></h1>
+  <p class="page-desc">Kurumsal web siteleri, e-ticaret altyapıları ve B2B portal çözümleri. Markanızın dijital kimliğini premium bir deneyime dönüştürüyoruz.</p>
+</div>
+
+<div class="services-intro">
+  <div class="svc-item">
+    <div class="svc-num">001</div>
+    <div class="svc-name">Kurumsal Web Sitesi</div>
+    <p class="svc-desc">Marka kimliğinizi yansıtan, modern ve profesyonel kurumsal web siteleri. UI/UX odaklı tasarım.</p>
+  </div>
+  <div class="svc-item">
+    <div class="svc-num">002</div>
+    <div class="svc-name">E-Ticaret</div>
+    <p class="svc-desc">Online satış platformları ve dijital sipariş sistemleri. Satış süreçlerinizi dijitalleştirin.</p>
+  </div>
+  <div class="svc-item">
+    <div class="svc-num">003</div>
+    <div class="svc-name">B2B Portal & Entegrasyon</div>
+    <p class="svc-desc">Kurumsal müşteriler için özel giriş paneli, teklif alma ve proje takip sistemleri.</p>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="proj-label">Tamamlanan Proje</div>
+  <h2 class="proj-title-lg">Artware — <em>Yazılım & Web</em></h2>
+
+  <div class="project-card">
+    <div class="proj-browser">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <span class="proj-url">artware.com.tr</span>
+    </div>
+    <div style="position:relative;overflow:hidden;">
+      <img src="https://api.microlink.io/?url=https%3A%2F%2Fartware.com.tr&screenshot=true&meta=false&embed=screenshot.url&waitFor=2000" 
+           alt="artware.com.tr önizleme" 
+           style="width:100%;display:block;aspect-ratio:16/8;object-fit:cover;object-position:top;"
+           onerror="this.style.display='none';document.getElementById('artware-placeholder').style.display='flex';" />
+      <div id="artware-placeholder" style="display:none;width:100%;aspect-ratio:16/8;background:linear-gradient(135deg,#1e1e1e,#2a2a2a);align-items:center;justify-content:center;">
+        <span style="font-family:var(--font-d);font-size:1.5rem;font-weight:300;color:rgba(169,116,73,0.2);letter-spacing:0.15em;">artware.com.tr</span>
+      </div>
+    </div>
+    <div class="proj-info">
+      <div class="proj-info-item">
+        <div class="info-label">Müşteri</div>
+        <div class="info-val">Artware Yazılım</div>
+        <div style="margin-top:0.5rem;font-size:11px;color:rgba(139,139,139,0.6);font-family:var(--font-b);">İstanbul, Türkiye</div>
+      </div>
+      <div class="proj-info-item">
+        <div class="info-label">Hizmetler</div>
+        <div class="info-tags">
+          <span class="tag">Web Design</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Corporate</span>
+          <span class="tag">B2B</span>
+        </div>
+      </div>
+      <div class="proj-info-item">
+        <div class="info-label">Sektör</div>
+        <div class="info-val">Yazılım & Teknoloji</div>
+        <div style="margin-top:0.5rem;font-size:11px;color:rgba(139,139,139,0.6);font-family:var(--font-b);">Mikro Yazılım İş Ortağı</div>
+      </div>
+    </div>
+    <div class="proj-cta">
+      <p class="proj-cta-text">Kurumsal kimlik ve dijital varlık tasarımı tamamlandı.</p>
+      <a class="btn-visit" href="https://artware.com.tr" target="_blank">Siteyi Ziyaret Et →</a>
+    </div>
+  </div>
+</div>
+
+<div class="process-section">
+  <div class="section-num">Süreç</div>
+  <h2 class="section-title">Nasıl Çalışıyoruz?</h2>
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-name">Keşif & Strateji</div>
+      <p class="step-desc">Markanızı, hedef kitlenizi ve dijital hedeflerinizi analiz ederek strateji belirliyoruz.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-name">Tasarım & Prototip</div>
+      <p class="step-desc">Wireframe ve görsel tasarım aşamalarından geçirerek onaylı bir prototip oluşturuyoruz.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-name">Geliştirme</div>
+      <p class="step-desc">Responsive, hızlı ve SEO dostu web sitesi geliştirme. Modern teknolojiler ile.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-name">Yayın & Destek</div>
+      <p class="step-desc">Canlıya alma, test ve sürekli destek. Siteniz her zaman güncel ve çalışır durumda.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-eyebrow">Proje Başlatalım</div>
+  <h2 class="cta-title">Web siteniz için<br><em>Teklif Alın.</em></h2>
+  <a class="btn-primary" href="contact.html">İletişime Geç →</a>
+</div>
+
+<footer>
+  <div class="footer-logo"><a href="index.html"><img src="logo-text.png" alt="serksahin design studio" /></a></div>
+  <div class="footer-copy">© 2026 — Istanbul, Türkiye</div>
+</footer>
+<script>
+  // Hamburger menu
+  function toggleNav() {
+    var nav = document.querySelector('.nav-links');
+    var ham = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    ham.classList.toggle('open');
+  }
+  // Dışa tıklayınca kapat
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>

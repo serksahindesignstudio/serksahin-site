@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="shortcut icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>serksahin | Visual Identity | Premium Branding | Print Design</title>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@300,400,500,600,700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --cream: #EFE6DA; --sand: #D8C6AE; --charcoal: #2B2B2B;
+    --bronze: #A97449; --warm-gray: #8B8B8B;
+    --burgundy: #4B1E24; --burgundy-light: #6B2D35; --burgundy-pale: #f5eced;
+    --font-d: 'ClashGrotesk', 'Inter', sans-serif; --font-b: 'Inter', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--charcoal); font-family: var(--font-b); overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: var(--burgundy); border-bottom: 1px solid rgba(169,116,73,0.25); }
+  .nav-logo img { height: 26px; display: block; filter: brightness(1.15); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; color: rgba(239,230,218,0.6); text-decoration: none; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--bronze); }
+
+  /* HERO */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; padding-top: 66px; }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 4rem; background: var(--burgundy); position: relative; overflow: hidden; }
+  .hero-left::after { content: ''; position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border: 1px solid rgba(169,116,73,0.12); border-radius: 50%; pointer-events: none; }
+  .hero-left::before { content: ''; position: absolute; bottom: -120px; left: -60px; width: 240px; height: 240px; border: 1px solid rgba(169,116,73,0.08); border-radius: 50%; pointer-events: none; }
+  .hero-eyebrow { font-family: var(--font-d); font-size: 9px; font-weight: 500; letter-spacing: 0.4em; color: var(--bronze); text-transform: uppercase; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--bronze); }
+  .hero-title { font-family: var(--font-d); font-size: clamp(2.6rem, 4.5vw, 4rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 1rem; letter-spacing: -0.02em; }
+  .hero-title em { font-style: italic; color: var(--bronze); }
+  .hero-title strong { font-weight: 600; display: block; }
+  .hero-desc { font-size: 13px; color: rgba(239,230,218,0.55); line-height: 1.8; margin: 2rem 0 3rem; max-width: 360px; font-weight: 300; }
+  .hero-cta { display: flex; gap: 1.5rem; align-items: center; }
+  .btn-primary { background: var(--bronze); color: var(--cream); font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.5rem; border: none; cursor: pointer; transition: all 0.3s; }
+  .btn-primary:hover { background: var(--cream); color: var(--burgundy); }
+  .btn-ghost { font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(239,230,218,0.5); border: 1px solid rgba(239,230,218,0.18); background: none; cursor: pointer; padding: 1rem 2rem; transition: all 0.3s; }
+  .btn-ghost:hover { border-color: var(--bronze); color: var(--bronze); }
+  .hero-right { background: var(--cream); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .corner-deco { position: absolute; width: 60px; height: 60px; border-color: rgba(75,30,36,0.15); border-style: solid; }
+  .corner-deco.tl { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
+  .corner-deco.tr { top: 20px; right: 20px; border-width: 1px 1px 0 0; }
+  .corner-deco.bl { bottom: 20px; left: 20px; border-width: 0 0 1px 1px; }
+  .corner-deco.br { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
+  .logo-stage { position: relative; width: 380px; height: 380px; display: flex; align-items: center; justify-content: center; }
+  .logo-gif { position: absolute; width: 100%; height: 100%; object-fit: contain; filter: invert(1) sepia(1) saturate(2) hue-rotate(300deg) brightness(0.35) contrast(1.5); }
+  .hero-badge { position: absolute; bottom: 3rem; right: 3rem; font-family: var(--font-d); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm-gray); text-align: right; }
+  .hero-badge span { display: block; font-size: 28px; font-weight: 600; color: var(--burgundy); letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.3rem; }
+
+  /* STATS */
+  .stats { background: var(--charcoal); padding: 2.5rem 4rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .stat { text-align: center; padding: 1rem 0; border-right: 1px solid rgba(255,255,255,0.06); }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-family: var(--font-d); font-size: 2.2rem; font-weight: 300; color: var(--cream); letter-spacing: -0.02em; }
+  .stat-num sup { font-size: 1rem; color: var(--bronze); font-weight: 500; }
+  .stat-label { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; color: var(--warm-gray); text-transform: uppercase; margin-top: 0.4rem; }
+
+  /* SECTION COMMONS */
+  .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; border-bottom: 1px solid rgba(43,43,43,0.12); padding-bottom: 2rem; }
+  .section-num { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; color: var(--bronze); text-transform: uppercase; margin-bottom: 0.8rem; }
+  .section-title { font-family: var(--font-d); font-size: clamp(1.7rem, 2.5vw, 2.3rem); font-weight: 300; color: var(--charcoal); letter-spacing: -0.02em; }
+  .section-link { font-family: var(--font-d); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm-gray); cursor: pointer; transition: color 0.3s; text-decoration: none; }
+  .section-link:hover { color: var(--bronze); }
+
+  /* SERVICES — krem zemin, burgundy yazı/ikon */
+  .services-section { background: var(--cream); padding: 6rem 4rem; }
+  .services-section .section-title { color: var(--charcoal); }
+  .services-section .section-num { color: var(--bronze); }
+  .services-section .section-header { border-color: rgba(43,43,43,0.12); }
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+  .service-card {
+    background: var(--cream);
+    border: 1px solid rgba(75,30,36,0.12);
+    padding: 2.5rem 2rem;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .service-card:hover { background: var(--burgundy-pale); border-color: rgba(75,30,36,0.25); }
+  .svc-num { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; color: var(--bronze); text-transform: uppercase; margin-bottom: 2rem; }
+  .svc-icon {
+    width: 44px; height: 44px;
+    border: 1px solid rgba(75,30,36,0.2);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem; font-size: 18px;
+    color: var(--burgundy);
+  }
+  .svc-name { font-family: var(--font-d); font-size: 1rem; font-weight: 500; color: var(--burgundy); margin-bottom: 0.8rem; }
+  .svc-desc { font-size: 12px; color: var(--warm-gray); line-height: 1.7; font-weight: 300; }
+  .svc-arrow { margin-top: 2rem; font-size: 18px; color: var(--burgundy); display: block; transition: transform 0.3s; opacity: 0.5; }
+  .service-card:hover .svc-arrow { transform: translateX(5px); opacity: 1; }
+
+  /* PORTFOLIO */
+  .portfolio-sec { background: var(--charcoal); padding: 6rem 4rem; }
+  .portfolio-sec .section-title { color: var(--cream); }
+  .portfolio-sec .section-header { border-color: rgba(255,255,255,0.1); }
+  .works-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+  .work-card { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 4/3; background: var(--burgundy); text-decoration: none; display: block; }
+  .work-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease, filter 0.4s ease; filter: brightness(0.9) saturate(0.95); }
+  .work-card:hover img { transform: scale(1.05); filter: brightness(0.55) saturate(0.8); }
+  .work-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; background: linear-gradient(to top, rgba(43,43,43,0.82) 0%, transparent 55%); transition: background 0.4s; }
+  .work-card:hover .work-overlay { background: linear-gradient(to top, rgba(75,30,36,0.92) 0%, rgba(75,30,36,0.25) 100%); }
+  .work-cat { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; color: var(--bronze); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .work-name { font-family: var(--font-d); font-size: 1.1rem; font-weight: 500; color: var(--cream); line-height: 1.3; }
+  .work-arrow { position: absolute; top: 1.5rem; right: 1.5rem; width: 36px; height: 36px; border: 1px solid rgba(239,230,218,0.3); display: flex; align-items: center; justify-content: center; color: var(--cream); font-size: 14px; opacity: 0; transform: translateY(-4px); transition: all 0.3s; background: rgba(75,30,36,0.5); }
+  .work-card:hover .work-arrow { opacity: 1; transform: translateY(0); }
+  .behance-cta { margin-top: 3rem; text-align: center; }
+  .btn-outline { display: inline-block; font-family: var(--font-d); font-size: 10px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cream); border: 1px solid rgba(239,230,218,0.25); padding: 1rem 3rem; text-decoration: none; transition: all 0.3s; }
+  .btn-outline:hover { background: var(--burgundy); border-color: var(--burgundy); }
+
+  /* VIDEO */
+  .video-sec { background: var(--burgundy); padding: 6rem 4rem; }
+  .video-sec .section-title { color: var(--cream); }
+  .video-sec .section-num { color: var(--bronze); }
+  .video-sec .section-header { border-color: rgba(255,255,255,0.1); }
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+  .video-card { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 16/9; background: #1a0a0c; }
+  .video-thumb { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.4s; filter: brightness(0.7); }
+  .video-card:hover .video-thumb { transform: scale(1.04); filter: brightness(0.45); }
+  .video-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; background: linear-gradient(to top, rgba(75,30,36,0.88) 0%, transparent 55%); }
+  .video-title { font-family: var(--font-d); font-size: 0.95rem; font-weight: 500; color: var(--cream); line-height: 1.3; }
+  .video-year { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.25em; color: var(--bronze); text-transform: uppercase; margin-bottom: 0.4rem; }
+  .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.85); width: 56px; height: 56px; background: rgba(75,30,36,0.85); border: 1.5px solid rgba(239,230,218,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s; }
+  .play-btn svg { width: 20px; height: 20px; fill: var(--cream); margin-left: 3px; }
+  .video-card:hover .play-btn { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+  /* YouTube Modal */
+  .yt-modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+  .yt-modal.active { display: flex; }
+  .yt-modal-inner { position: relative; width: 90vw; max-width: 900px; aspect-ratio: 16/9; }
+  .yt-modal-inner iframe { width: 100%; height: 100%; border: none; }
+  .yt-close { position: absolute; top: -3rem; right: 0; background: none; border: none; color: rgba(239,230,218,0.7); font-size: 2rem; cursor: pointer; font-family: var(--font-d); transition: color 0.2s; }
+  .yt-close:hover { color: var(--bronze); }
+
+  /* ABOUT */
+  .about-sec { display: grid; grid-template-columns: 1fr 1fr; }
+  .about-left { background: var(--burgundy); padding: 6rem 4rem; display: flex; align-items: center; justify-content: center; }
+  .about-visual { width: 260px; height: 360px; background: var(--cream); position: relative; display: flex; align-items: flex-end; padding: 2rem; }
+  .about-accent { position: absolute; top: -1rem; right: -1rem; width: 55%; height: 55%; border: 1px solid var(--bronze); pointer-events: none; }
+  .about-name { font-family: var(--font-d); font-size: 1.1rem; font-weight: 500; color: var(--charcoal); }
+  .about-role { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--burgundy); margin-top: 0.3rem; }
+  .about-right { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
+  .about-bio { font-size: 13.5px; color: var(--warm-gray); line-height: 1.95; font-weight: 300; margin: 1.5rem 0 2.5rem; }
+  .about-bio p { margin-bottom: 1.2rem; }
+  .about-bio p:last-child { margin-bottom: 0; }
+  .about-bio strong { color: var(--charcoal); font-weight: 500; }
+  .skills-list { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .skill-tag { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); border: 1px solid rgba(75,30,36,0.3); padding: 0.5rem 1rem; background: var(--burgundy-pale); }
+
+  /* CONTACT */
+  .contact-sec { background: var(--burgundy); padding: 7rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .contact-sec::before { content: 'SDS'; position: absolute; font-family: var(--font-d); font-size: 20rem; font-weight: 700; color: rgba(255,255,255,0.03); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+  .contact-eyebrow { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--bronze); margin-bottom: 1.5rem; }
+  .contact-title { font-family: var(--font-d); font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 300; color: var(--cream); letter-spacing: -0.02em; margin-bottom: 2.5rem; line-height: 1.15; }
+  .contact-title em { font-style: italic; color: var(--sand); }
+  .contact-email { font-family: var(--font-d); font-size: 1.1rem; font-weight: 300; color: var(--cream); letter-spacing: 0.1em; display: inline-block; margin-bottom: 2.5rem; border-bottom: 1px solid rgba(239,230,218,0.2); padding-bottom: 0.8rem; cursor: pointer; transition: color 0.3s; text-decoration: none; }
+  .contact-email:hover { color: var(--sand); }
+  .contact-socials { display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem; }
+  .social-link { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(239,230,218,0.4); cursor: pointer; transition: color 0.3s; text-decoration: none; }
+  .social-link:hover { color: var(--cream); }
+
+  /* REFERENCES */
+  .references-sec { background: var(--cream); padding: 6rem 4rem; }
+  .references-sec .section-header { border-color: rgba(43,43,43,0.12); }
+  .references-sec .section-title { color: var(--charcoal); }
+  .ref-quote {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .ref-quote p {
+    font-family: var(--font-d);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    max-width: 580px;
+    margin: 0 auto;
+    letter-spacing: 0.01em;
+  }
+  .ref-quote p em {
+    color: var(--burgundy);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .ref-divider {
+    width: 40px; height: 1px;
+    background: var(--bronze);
+    margin: 0 auto 2rem;
+  }
+  .logos-strip {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0;
+    border: 1px solid rgba(75,30,36,0.08);
+  }
+  .logos-strip-row {
+    display: contents;
+  }
+  .logo-cell {
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.8rem 1.2rem;
+    border-right: 1px solid rgba(75,30,36,0.08);
+    border-bottom: 1px solid rgba(75,30,36,0.08);
+    background: var(--cream);
+    transition: background 0.3s;
+  }
+  .logo-cell:nth-child(10n) { border-right: none; }
+  .logo-cell:nth-last-child(-n+10) { border-bottom: none; }
+  .logo-cell:hover { background: var(--burgundy-pale); }
+  .logo-cell img {
+    max-width: 100px;
+    max-height: 44px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.4);
+    opacity: 0.75;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+  .logo-cell:hover img {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+  }
+
+  footer { background: var(--charcoal); padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); }
+  .footer-logo img { height: 28px; display: block; }
+  .footer-copy { font-size: 11px; color: rgba(139,139,139,0.4); font-family: var(--font-d); letter-spacing: 0.1em; }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 1024px) {
+    nav { padding: 1.2rem 2rem; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 8rem 2rem 4rem; }
+    .hero-right { min-height: 50vw; }
+    .logo-stage { width: 260px; height: 260px; }
+    .stats { grid-template-columns: repeat(2, 1fr); padding: 2rem; }
+    .services-section, .services-section.services-intro { padding: 4rem 2rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-grid, .video-grid, .works-grid { grid-template-columns: repeat(2, 1fr); }
+    .section, .portfolio-sec, .video-sec, .references-sec, .project-section, .process-section, .cta-section { padding: 4rem 2rem; }
+    .about-sec { grid-template-columns: 1fr; }
+    .about-left { padding: 4rem 2rem; min-height: 60vw; }
+    .about-right { padding: 4rem 2rem; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .contact-left { padding: 8rem 2rem 4rem; min-height: auto; }
+    .contact-right { padding: 4rem 2rem; }
+    .logos-strip { grid-template-columns: repeat(5, 1fr); }
+    .filter-bar { padding: 1rem 2rem; flex-wrap: wrap; gap: 0.4rem; }
+    footer { padding: 1.5rem 2rem; }
+    .page-hero { padding: 8rem 2rem 4rem; }
+    .proj-info { grid-template-columns: 1fr; }
+    .proj-info-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .proj-info-item:last-child { border-bottom: none; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-intro { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  @media (max-width: 768px) {
+    /* NAV — hamburger */
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--burgundy); align-items: center; justify-content: center; gap: 2rem; z-index: 200; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 14px; letter-spacing: 0.15em; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 300; position: relative; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* HERO */
+    .hero-left { padding: 7rem 1.5rem 3rem; }
+    .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
+    .hero-right { min-height: 70vw; }
+    .logo-stage { width: 200px; height: 200px; }
+    .hero-badge { bottom: 1.5rem; right: 1.5rem; }
+    .hero-badge span { font-size: 20px; }
+
+    /* STATS */
+    .stats { grid-template-columns: repeat(2, 1fr); padding: 1.5rem; gap: 0; }
+    .stat { padding: 1.2rem 0.5rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .stat:nth-child(2n) { border-right: none; }
+    .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+
+    /* SERVICES */
+    .services-grid { grid-template-columns: 1fr; gap: 2px; }
+    .service-card { padding: 2rem 1.5rem; }
+
+    /* PORTFOLIO / VIDEO / WORKS */
+    .portfolio-grid, .video-grid, .works-grid { grid-template-columns: 1fr; gap: 2px; }
+    .proj-card, .video-card, .work-card { aspect-ratio: 16/9; }
+
+    /* LOGOS */
+    .logos-strip { grid-template-columns: repeat(3, 1fr); }
+    .logo-cell { padding: 1.2rem 0.8rem; }
+    .logo-cell img { max-width: 70px; max-height: 28px; }
+
+    /* ABOUT */
+    .about-left { display: none; }
+    .about-right { padding: 3rem 1.5rem; }
+
+    /* CONTACT */
+    .contact-left { padding: 7rem 1.5rem 3rem; }
+    .contact-right { padding: 3rem 1.5rem; }
+    .contact-info { gap: 1rem; }
+    .info-item { flex-direction: column; gap: 0.3rem; }
+
+    /* SECTIONS */
+    .section, .portfolio-sec, .video-sec, .references-sec, .services-section { padding: 3rem 1.5rem; }
+    .page-hero { padding: 7rem 1.5rem 3rem; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .filter-bar { padding: 0.8rem 1.5rem; overflow-x: auto; flex-wrap: nowrap; }
+    .filter-btn { white-space: nowrap; }
+
+    /* WEB DESIGN */
+    .project-section, .process-section, .cta-section { padding: 3rem 1.5rem; }
+    .process-grid { grid-template-columns: 1fr; }
+    .proj-cta { flex-direction: column; gap: 1rem; text-align: center; }
+    .services-intro { padding: 3rem 1.5rem; }
+
+    /* FOOTER */
+    footer { padding: 1.2rem 1.5rem; }
+    .footer-logo img { height: 20px; }
+
+    /* MODAL */
+    .yt-modal-inner { width: 95vw; }
+    .yt-close { top: -2.5rem; font-size: 1.5rem; }
+
+    /* REF QUOTE */
+    .ref-quote p { font-size: 0.9rem; }
+    .logos-strip { border: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .logo-cell { border: none; padding: 0.8rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+    .page-title { font-size: clamp(2rem, 9vw, 3rem); }
+    .hero-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .btn-primary, .btn-ghost { width: 100%; text-align: center; display: block; }
+    .logos-strip { grid-template-columns: repeat(2, 1fr); }
+    .stat-num { font-size: 1.8rem; }
+    .social-row { flex-direction: column; gap: 0.8rem; }
+  }
+  /* ===================================================== */
+
+</style>
+</head>
+<body>
+
+<!-- YouTube Modal -->
+<div class="yt-modal" id="ytModal">
+  <div class="yt-modal-inner">
+    <button class="yt-close" onclick="closeModal()">✕</button>
+    <iframe id="ytFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-logo"><img src="logo-text.png" alt="serksahin design studio" /></div>
+  <ul class="nav-links">
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="portfolio.html">Portföy</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="#about">Hakkında</a></li>
+    <li><a href="#references">Referanslar</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="contact.html">İletişim</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Visual Identity & Premium Branding</div>
+    <h1 class="hero-title">Markanızı<br><em>güçlü</em> bir<br><strong>kimliğe</strong> dönüştürüyoruz.</h1>
+    <p class="hero-desc">İstanbul merkezli tasarım stüdyosu olarak kurumsal kimlik, premium baskı ve marka stratejisi alanında özgün çözümler sunuyoruz.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="window.location.href='portfolio.html'">Portföyü İncele</button>
+      <button class="btn-ghost" onclick="window.location.href='contact.html'">İletişime Geç</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="corner-deco tl"></div><div class="corner-deco tr"></div>
+    <div class="corner-deco bl"></div><div class="corner-deco br"></div>
+    <div class="logo-stage">
+      <img class="logo-gif" src="full-l-12-01.gif" alt="Serksahin Design Studio Logo" />
+    </div>
+    <div class="hero-badge"><span>10+</span>Yıllık Deneyim</div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">200<sup>+</sup></div><div class="stat-label">Tamamlanan Proje</div></div>
+  <div class="stat"><div class="stat-num">85<sup>+</sup></div><div class="stat-label">Mutlu Müşteri</div></div>
+  <div class="stat"><div class="stat-num">12<sup>+</sup></div><div class="stat-label">Sektör</div></div>
+  <div class="stat"><div class="stat-num">10<sup>+</sup></div><div class="stat-label">Yıllık Deneyim</div></div>
+</div>
+
+<!-- SERVICES — krem zemin, burgundy yazı -->
+<section class="services-section" id="services">
+  <div class="section-header">
+    <div><div class="section-num">01 — Hizmetler</div><h2 class="section-title">Neler Yapıyoruz?</h2></div>
+  </div>
+  <div class="services-grid">
+    <a class="service-card" href="portfolio.html" style="text-decoration:none">
+      <div class="svc-num">001</div>
+      <div class="svc-icon">◈</div>
+      <div class="svc-name">Visual Identity</div>
+      <p class="svc-desc">Logo, kurumsal kimlik ve marka sistemi tasarımı. Markanızın özünü görsel dile dönüştürüyoruz.</p>
+      <span class="svc-arrow">→</span>
+    </a>
+    <a class="service-card" href="portfolio.html" style="text-decoration:none">
+      <div class="svc-num">002</div>
+      <div class="svc-icon">◐</div>
+      <div class="svc-name">Print Design</div>
+      <p class="svc-desc">Kartvizit, ambalaj, katalog ve kurumsal basılı materyaller. Web-to-Print çözümleri dahil.</p>
+      <span class="svc-arrow">→</span>
+    </a>
+    <a class="service-card" href="webdesign.html" style="text-decoration:none">
+      <div class="svc-num">003</div>
+      <div class="svc-icon">▣</div>
+      <div class="svc-name">Web Design</div>
+      <p class="svc-desc">Kurumsal web siteleri, e-ticaret altyapıları ve dijital deneyim tasarımı. Premium ve işlevsel.</p>
+      <span class="svc-arrow">→</span>
+    </a>
+    <a class="service-card" href="video.html" style="text-decoration:none">
+      <div class="svc-num">004</div>
+      <div class="svc-icon">▶</div>
+      <div class="svc-name">Music Video Production</div>
+      <p class="svc-desc">Müzik videosu yönetimi, görsel konsept geliştirme ve prodüksiyon. Sanatçıların hikayelerini ekrana taşıyoruz.</p>
+      <span class="svc-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio-sec" id="works">
+  <div class="section-header">
+    <div><div class="section-num">02 — Portföy</div><h2 class="section-title">Seçili Çalışmalar</h2></div>
+    <a class="section-link" href="https://www.behance.net/serksahin" target="_blank" style="color:rgba(239,230,218,0.4)">Behance'de Gör →</a>
+  </div>
+  <div class="works-grid">
+    <a class="work-card" href="https://www.behance.net/gallery/249429251/Guerpnar-Doener-Re-Branding" target="_blank">
+      <img src="work-gurpinar.png" alt="Gürpınar Döner" />
+      <div class="work-overlay"><div class="work-cat">Brand Identity & Packaging</div><div class="work-name">Gürpınar Döner<br>Re Branding</div></div>
+      <div class="work-arrow">↗</div>
+    </a>
+    <a class="work-card" href="https://www.behance.net/gallery/244580647/caphype-Brand-Identity" target="_blank">
+      <img src="work-caphype.png" alt="caphype Brand Identity" />
+      <div class="work-overlay"><div class="work-cat">Visual Identity</div><div class="work-name">caphype®<br>Brand Identity</div></div>
+      <div class="work-arrow">↗</div>
+    </a>
+    <a class="work-card" href="https://www.behance.net/gallery/244577891/Dt-Sevgi-Yldz-ADSP-Branding-Guideline-Book" target="_blank">
+      <img src="work-adsp.png" alt="Dt. Sevgi Yıldız ADSP" loading="lazy" />
+      <div class="work-overlay"><div class="work-cat">Branding Guideline</div><div class="work-name">Dt. Sevgi Yıldız<br>ADSP Brand Book</div></div>
+      <div class="work-arrow">↗</div>
+    </a>
+    <a class="work-card" href="https://www.behance.net/gallery/219410295/Amuse-Ai-App-Mobile-App-Design" target="_blank">
+      <img src="work-amuse.png" alt="Amuse AI App" />
+      <div class="work-overlay"><div class="work-cat">UI / Mobile App Design</div><div class="work-name">Amuse AI App<br>Mobile Design</div></div>
+      <div class="work-arrow">↗</div>
+    </a>
+  </div>
+  <div class="behance-cta">
+    <a class="btn-outline" href="https://www.behance.net/serksahin" target="_blank">Tüm Çalışmaları Behance'de İncele →</a>
+  </div>
+</section>
+
+<!-- VIDEO / MUSIC VIDEO PRODUCTION -->
+<section class="video-sec" id="videos">
+  <div class="section-header">
+    <div><div class="section-num">03 — Video</div><h2 class="section-title">Music Video Production</h2></div>
+    <a class="section-link" href="https://serksahin.com/video-services" target="_blank" style="color:rgba(239,230,218,0.4)">Tümünü Gör →</a>
+  </div>
+  <div class="video-grid">
+    <div class="video-card" onclick="openModal('f__OIqWGuSw')">
+      <img class="video-thumb" src="https://img.youtube.com/vi/f__OIqWGuSw/maxresdefault.jpg" alt="Arabesk Düşler"
+           onerror="this.src='https://img.youtube.com/vi/f__OIqWGuSw/hqdefault.jpg'" />
+      <div class="video-overlay">
+        <div class="video-year">2025</div>
+        <div class="video-title">Arabesk Düşler — Visual Works & Video Clip</div>
+      </div>
+      <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <div class="video-card" onclick="openModal('nZHcFCCE2_U')">
+      <img class="video-thumb" src="https://img.youtube.com/vi/nZHcFCCE2_U/maxresdefault.jpg" alt="Sek x Elif Bestehan"
+           onerror="this.src='https://img.youtube.com/vi/nZHcFCCE2_U/hqdefault.jpg'" />
+      <div class="video-overlay">
+        <div class="video-year">2024</div>
+        <div class="video-title">Sek x Elif Bestehan — İnanmışız</div>
+      </div>
+      <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <div class="video-card" onclick="openModal('k3I1MWiMFlc')">
+      <img class="video-thumb" src="https://img.youtube.com/vi/k3I1MWiMFlc/maxresdefault.jpg" alt="İbrahim Bayçöl Yaz Böyle Geçti"
+           onerror="this.src='https://img.youtube.com/vi/k3I1MWiMFlc/hqdefault.jpg'" />
+      <div class="video-overlay">
+        <div class="video-year">2022</div>
+        <div class="video-title">İbrahim Bayçöl — Yaz Böyle Geçti</div>
+      </div>
+      <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+    <div class="video-card" onclick="openModal('I-wnw4F8bl8')">
+      <img class="video-thumb" src="https://img.youtube.com/vi/I-wnw4F8bl8/maxresdefault.jpg" alt="Sek x Caner Münzevi"
+           onerror="this.src='https://img.youtube.com/vi/I-wnw4F8bl8/hqdefault.jpg'" />
+      <div class="video-overlay">
+        <div class="video-year">2022</div>
+        <div class="video-title">Sek x Caner Şahin — Münzevi</div>
+      </div>
+      <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-sec">
+    <div class="about-left">
+      <div class="about-visual">
+        <div class="about-accent"></div>
+        <div><div class="about-name">Serkan Şahin</div><div class="about-role">Creative Director</div></div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="section-num">04 — Hakkında</div>
+
+      <h2 class="section-title" style="margin-top:1rem">Tasarımın Gücüne<br>İnanıyoruz.</h2>
+      <div class="about-bio">
+        <p>10+ yıllık sektör deneyimini; strateji, tasarım ve üretim süreçlerini aynı çatı altında birleştiren bütünsel bir yapı ile markalara sunuyorum. Kurumsal kimlik sistemleri, logo tasarımı ve marka görsel dili geliştirme alanlarında; estetik yaklaşımı yalnızca görsel bir değer olarak değil, markanın <strong>sürdürülebilir büyümesini destekleyen stratejik bir araç</strong> olarak ele alıyorum.</p>
+        <p>Matbaa, ajans ve kurumsal yapılarda edinilen çok yönlü deneyim sayesinde; tasarım süreçlerini <strong>üretilebilirlik, ölçeklenebilirlik ve operasyonel verimlilik</strong> odağında yönetiyorum. Her marka için; dijital ve fiziksel tüm temas noktalarında tutarlı, güçlü ve premium bir marka deneyimi oluşturmayı hedefliyorum.</p>
+        <p>Özellikle <strong>Web-to-Print (W2P) sistemleri, e-ticaret altyapıları</strong> ve baskı üretim operasyonları konusunda uzmanlaşarak; fikir geliştirme aşamasından üretim ve uygulama süreçlerine kadar tüm ekosistemi yöneten entegre çözümler sunuyorum.</p>
+        <p>Markalara; yaratıcı yön, görsel sistem tasarımı, baskı danışmanlığı ve üretim süreç yönetimini kapsayan kapsamlı bir hizmet modeliyle yaklaşırken; <strong>kalite, hız ve maliyet optimizasyonunu</strong> aynı stratejik dengede buluşturuyorum.</p>
+      </div>
+      <div class="skills-list">
+        <span class="skill-tag">Visual Identity</span>
+        <span class="skill-tag">Brand System</span>
+        <span class="skill-tag">Print Design</span>
+        <span class="skill-tag">Web-to-Print</span>
+        <span class="skill-tag">Art Direction</span>
+        <span class="skill-tag">Web Design</span>
+        <span class="skill-tag">Music Video</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contact">
+  <div class="contact-eyebrow">05 — İletişim</div>
+  <h2 class="contact-title">Projenizi Birlikte<br><em>Hayata Geçirelim.</em></h2>
+  <div><a class="contact-email" href="mailto:info@serksahin.com">info@serksahin.com</a></div>
+  <a href="contact.html" class="btn-primary" style="text-decoration:none;display:inline-block;cursor:pointer;">Teklif Al</a>
+  <div class="contact-socials">
+    <a class="social-link" href="https://www.instagram.com/serksahin/" target="_blank">Instagram</a>
+    <a class="social-link" href="https://www.linkedin.com/in/serksahin/" target="_blank">LinkedIn</a>
+    <a class="social-link" href="https://www.behance.net/serksahin" target="_blank">Behance</a>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="references-sec" id="references">
+  <div class="section-header">
+    <div>
+      <div class="section-num">06 — Referanslar</div>
+      <h2 class="section-title">İş Ortaklarımız</h2>
+    </div>
+  </div>
+  <div class="ref-quote">
+    <div class="ref-divider"></div>
+    <p>Her projeye aynı özeni gösteriyor, markaların gücünü tasarımla birleştiriyoruz.<br>
+    <em>Güvenleri için tüm iş ortaklarımıza teşekkür ederiz.</em></p>
+  </div>
+  <div class="logos-strip">
+    <!-- Görseli 2×10 grid olarak dilimleyip CSS clip ile gösteriyoruz -->
+    <!-- Satır 1 -->
+    <div class="logo-cell"><img src="ref-logo-0.png" alt="artware"></div>
+    <div class="logo-cell"><img src="ref-logo-1.png" alt="Avansas"></div>
+    <div class="logo-cell"><img src="ref-logo-2.png" alt="BTMCo"></div>
+    <div class="logo-cell"><img src="ref-logo-3.png" alt="multiprint"></div>
+    <div class="logo-cell"><img src="ref-logo-4.png" alt="Dt. Sevgi Yıldız"></div>
+    <div class="logo-cell"><img src="ref-logo-5.png" alt="BG Media"></div>
+    <div class="logo-cell"><img src="ref-logo-6.png" alt="CE Ahşap"></div>
+    <div class="logo-cell"><img src="ref-logo-7.png" alt="Kinsiz"></div>
+    <div class="logo-cell"><img src="ref-logo-8.png" alt="Novatech"></div>
+    <div class="logo-cell"><img src="ref-logo-9.png" alt="Zemin Teknik"></div>
+    <!-- Satır 2 -->
+    <div class="logo-cell"><img src="ref-logo-10.png" alt="Narcy"></div>
+    <div class="logo-cell"><img src="ref-logo-11.png" alt="Tiny Horse"></div>
+    <div class="logo-cell"><img src="ref-logo-12.png" alt="Hills Bahçeşehir"></div>
+    <div class="logo-cell"><img src="ref-logo-13.png" alt="Soley Yapı"></div>
+    <div class="logo-cell"><img src="ref-logo-14.png" alt="Çiğatoy Darvoza"></div>
+    <div class="logo-cell"><img src="ref-logo-15.png" alt="100 İstanbul"></div>
+    <div class="logo-cell"><img src="ref-logo-16.png" alt="Sosyal Medya Kampüsü"></div>
+    <div class="logo-cell"><img src="ref-logo-17.png" alt="Wotel"></div>
+    <div class="logo-cell"><img src="ref-logo-18.png" alt="Serproje"></div>
+    <div class="logo-cell"><img src="ref-logo-19.png" alt="ProIT"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="logo-text.png" alt="serksahin design studio" /></div>
+  <div class="footer-copy">© 2026 — Istanbul, Türkiye</div>
+</footer>
+
+<script>
+
+  // Hamburger menu
+  function toggleNav() {
+    var nav = document.querySelector('.nav-links');
+    var ham = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    ham.classList.toggle('open');
+  }
+  // Dışa tıklayınca kapat
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    });
+  });
+
+  // ayrı logo PNG'leri kullanılıyor, sprite JS gerekmez
+
+  function openModal(videoId) {
+    document.getElementById('ytFrame').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+    document.getElementById('ytModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('ytFrame').src = '';
+    document.getElementById('ytModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('ytModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: serksahindesignstudio/serksahin-site
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "blog/images"
+public_folder: "/blog/images"
+
+locale: "tr"
+
+collections:
+  - name: "posts"
+    label: "Blog Yazıları"
+    label_singular: "Blog Yazısı"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Yayın Tarihi", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - { label: "Kapak Görseli", name: "thumbnail", widget: "image", required: false }
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Visual Identity", value: "visual-identity" }
+          - { label: "Brand Strategy", value: "brand-strategy" }
+          - { label: "Print Design", value: "print-design" }
+          - { label: "Web Design", value: "web-design" }
+          - { label: "Music Video", value: "music-video" }
+          - { label: "Sektör İpuçları", value: "ipuclari" }
+      - { label: "Özet", name: "excerpt", widget: "text", hint: "Google'da görünecek kısa açıklama (max 160 karakter)" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
+      - { label: "SEO Başlığı", name: "seo_title", widget: "string", required: false, hint: "Boş bırakılırsa başlık kullanılır" }
+      - { label: "SEO Açıklaması", name: "seo_description", widget: "text", required: false }
+      - label: "Yayın Durumu"
+        name: "draft"
+        widget: "boolean"
+        label: "Taslak"
+        default: false
