@@ -3,7 +3,8 @@ title: "Logo Tasarım Fiyatları 2026: Gerçekçi Bir Rehber"
 date: 2026-05-21
 category: visual-identity
 excerpt: "2026 yılında logo tasarımı için ne kadar bütçe ayırmalısınız? Freelancer mı ajans mı? Fiyatı etkileyen faktörler ve dikkat etmeniz gerekenler."
-thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/1b3fc9109076543.Y3JvcCw1MDgxLDM5NzQsMTQwOCwyNTE.jpg
+thumbnail: /blog/images/logo-fiyat-thumb.jpg
+hero_image: /blog/images/logo-fiyat-hero.jpg
 seo_title: "Logo Tasarım Fiyatları 2026 | Serksahin Design Studio İstanbul"
 seo_description: "2026 yılında Türkiye'de logo tasarım fiyatları ne kadar? Freelancer ve ajans fiyat karşılaştırması, fiyatı etkileyen faktörler ve doğru bütçe rehberi."
 draft: false

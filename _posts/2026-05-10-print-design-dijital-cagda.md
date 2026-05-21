@@ -3,7 +3,8 @@ title: "Dijital Çağda Print Design Hala Neden Önemli?"
 date: 2026-05-10
 category: print-design
 excerpt: "Her şey dijitale taşınırken, fiziksel dokunuşun gücü hiç azalmadı. Baskı tasarımının marka deneyimindeki yeri neden vazgeçilmez?"
-thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/274d90223591647.Y3JvcCwzMTcxLDI0ODEsMTY0LDA.jpg
+thumbnail: /blog/images/dijital-thumb.jpg
+hero_image: /blog/images/dijital-hero.jpg
 seo_title: "Dijital Çağda Baskı Tasarımı | Print Design | Serksahin Design Studio"
 seo_description: "Dijitalleşen dünyada kartvizit, katalog ve ambalaj tasarımının önemi neden artıyor? Baskı tasarımının marka üzerindeki etkisi."
 draft: false

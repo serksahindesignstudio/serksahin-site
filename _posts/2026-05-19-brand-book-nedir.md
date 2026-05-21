@@ -3,7 +3,8 @@ title: "Brand Book (Marka Kılavuzu) Nedir, Neden Şarttır?"
 date: 2026-05-19
 category: brand-strategy
 excerpt: "Brand Book sadece büyük markalar için değil. Küçük işletmeden kurumsal şirkete her marka için neden vazgeçilmez olduğunu anlattık."
-thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/9bcca7244577891.Y3JvcCw2NTUsNTEyLDM5MSwxMTQ5.jpg
+thumbnail: /blog/images/brandbook-thumb.jpg
+hero_image: /blog/images/brandbook-hero.jpg
 seo_title: "Brand Book Nedir? Marka Kılavuzu Neden Şart? | Serksahin Design Studio"
 seo_description: "Brand Book (marka kullanım kılavuzu) nedir, ne işe yarar? Logonuzun, renklerinizin ve tipografinin doğru kullanımını garantilemek için neden şart olduğunu öğrenin."
 draft: false

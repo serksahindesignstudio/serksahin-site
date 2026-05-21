@@ -3,7 +3,8 @@ title: "2026 Logo Tasarım Trendleri: Markanızı Geleceğe Taşıyın"
 date: 2026-05-17
 category: visual-identity
 excerpt: "2026 yılında öne çıkan logo tasarım trendleri neler? Hangi trendler markanıza değer katar, hangilerinden kaçınmalısınız?"
-thumbnail: https://mir-s3-cdn-cf.behance.net/projects/808/db988f109507141.Y3JvcCw1MDgxLDM5NzQsMTQ1OSwyNjQ.jpg
+thumbnail: /blog/images/logo-trend-thumb.jpg
+hero_image: /blog/images/logo-trend-hero.jpg
 seo_title: "2026 Logo Tasarım Trendleri | Marka Kimliği | Serksahin Design Studio"
 seo_description: "2026 yılında logo tasarımında öne çıkan trendler: minimalizm, toprak tonları, çok yönlü logolar ve Logo Refresh. Hangi trend markanıza uygun?"
 draft: false
