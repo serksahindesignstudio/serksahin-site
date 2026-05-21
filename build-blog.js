@@ -12,7 +12,8 @@ function parseFrontmatter(content) {
     if (colonIdx === -1) return;
     const key = line.slice(0, colonIdx).trim();
     const val = line.slice(colonIdx + 1).trim().replace(/^["']|["']$/g, '');
-    meta[key] = val;
+    if (key === 'draft') { meta[key] = val; }
+    else { meta[key] = val; }
   });
   
   return { meta, body: match[2] };
@@ -63,7 +64,9 @@ const CATS = {
 
 const postCards = posts.map(p => `
   <a class="blog-card" href="/blog/${p.slug}.html">
-    <div class="blog-card-img" style="${p.thumbnail ? `background-image:url(${p.thumbnail})` : 'background: var(--burgundy)'}"></div>
+    <div class="blog-card-img">
+      \${p.thumbnail ? \`<img src="\${p.thumbnail}" alt="\${p.title}" loading="lazy" />\` : \`<div style="width:100%;height:100%;background:var(--burgundy)"></div>\`}
+    </div>
     <div class="blog-card-body">
       <div class="blog-meta">
         <span class="blog-cat">${CATS[p.category] || p.category}</span>
@@ -231,7 +234,7 @@ ${p.thumbnail ? `<meta property="og:image" content="${p.thumbnail}">` : ''}
   .post-title { font-family: var(--font-d); font-size: clamp(1.8rem,4vw,3.2rem); font-weight: 300; color: var(--cream); letter-spacing: -0.02em; line-height: 1.15; max-width: 700px; }
   .post-date { font-family: var(--font-d); font-size: 9px; letter-spacing: 0.2em; color: rgba(239,230,218,0.4); text-transform: uppercase; margin-top: 1.5rem; }
 
-  .post-thumbnail { width: 100%; max-height: 480px; object-fit: cover; display: block; }
+  .post-thumbnail { width: 100%; max-height: 520px; object-fit: cover; display: block; object-position: center; }
 
   .post-body { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
   .post-body h2 { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; color: var(--burgundy); margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
@@ -271,7 +274,7 @@ ${NAV.replace('class="active"', '').replace('/blog/index.html">', '/blog/index.h
   <h1 class="post-title">${p.title}</h1>
   <div class="post-date">${p.date}</div>
 </div>
-${p.thumbnail ? `<img class="post-thumbnail" src="${p.thumbnail}" alt="${p.title}">` : ''}
+${(p.hero_image || p.thumbnail) ? `<img class="post-thumbnail" src="${p.hero_image || p.thumbnail}" alt="${p.title}">` : ''}
 <div class="post-body">
   <p>${p.body.replace(/^## /gm, '</p><h2>').replace(/\n## /g, '</h2><p>').replace(/^### /gm, '</p><h3>').replace(/\n### /g, '</h3><p>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n\n/g, '</p><p>')}</p>
 </div>
